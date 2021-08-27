@@ -1,0 +1,53 @@
+:root {
+    // Main Content
+    --background-color: #121b24;
+    --text-color: rgba(255,255,255,.8);
+    // Font Family
+    --font-family: 'Segoe UI', sans-serif;
+    --second-font-family-: 'Fira Code', arial;
+    --third-font-family-: 'Fira Code', arial;
+    // Variety
+    --highlight: #10d5ff;
+    --border-box: rgba(255,255,255,.8);
+}
+
+
+html {
+    font-size: 62.5%;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    font-size: 1.6rem;
+    padding-bottom: 10rem;
+}
+
+.container {
+    width: 1200px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+h1,h2,h3,h4,h5,h6,p{
+    padding: 0;
+}
+
+ul {
+    padding: 0;
+}

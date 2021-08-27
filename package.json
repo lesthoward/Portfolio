@@ -3,16 +3,19 @@
   "version": "0.1.0",
   "description": "See all my personal projects here",
   "main": "src/js.app.js",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "css-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.2",
+    "html-webpack-template-pug": "^1.1.1",
+    "pug": "^3.0.2",
     "pug-loader": "^2.4.0",
     "sass-loader": "^12.1.0",
     "style-loader": "^3.2.1",
+    "webpack": "^5.51.1",
     "webpack-cli": "^4.8.0",
-    "webpack": "^5.51.1"
+    "webpack-dev-server": "^4.0.0"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
