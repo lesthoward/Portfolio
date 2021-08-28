@@ -1,0 +1,21 @@
+.header {
+    margin-top: 2rem;
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    height: 6rem;
+}
+
+.header__image {
+    height: inherit;
+    cursor: pointer;
+}
+
+.header__img {
+    height: inherit;
+    object-fit: cover;
+}
+

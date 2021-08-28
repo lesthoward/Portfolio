@@ -25,7 +25,7 @@ module.exports = {
                 use: ['pug-loader']
             },
             {
-                test: /\.s[ac]ss/i,
+                test: /\.s[ac]ss$/i,
                 use: [
                     "style-loader",
                     "css-loader",
@@ -33,8 +33,16 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(png|svg|jpeg|jpg|gif)/,
+                test: /\.(png|svg|jpeg|jpg|gif)$/,
                 type: "asset/resource"
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/,
+                type: "asset/resource"
+            },
+            {
+                test: /\.html$/i, 
+                loader: "html-loader"
             }
         ]
     },

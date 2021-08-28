@@ -1,19 +1,70 @@
-:root {
+
+@import url('https://fonts.googleapis.com/css?family=Fira+Code:300,regular,500,600,700');
+
+
+
+.dark {
     // Main Content
     --background-color: #121b24;
     --text-color: rgba(255,255,255,.8);
+    --text-contrast-color: #fff;
+    --text-reverse-color: #121b24;
+    --light-text-color: rgba(255,255,255,.6);
+    --first-color: #10d5ff;
+    --wrapper: #fff;
+    // Font Sizes
+    --font-size-uptitle: 6rem;
+    --font-size-title: 5rem;
+    --font-size-upsubtitle: 2.5rem;
+    --font-size-upparagraph: 2.5rem;
+    --font-size-general: 1.6rem;
+
+    --font-size-projects__title: ;
     // Font Family
     --font-family: 'Segoe UI', sans-serif;
-    --second-font-family-: 'Fira Code', arial;
-    --third-font-family-: 'Fira Code', arial;
+    --second-font-family: 'Fira Code', arial;
+    --third-font-family: 'Segoe Print', arial;
     // Variety
     --highlight: #10d5ff;
     --border-box: rgba(255,255,255,.8);
+    --input-border: rgba(255,255,255,.4);
+    --light-border: rgba(255,255,255,.4);
 }
 
+.light {
+    // Main Content
+    --background-color: #f2f2f2;
+    --text-color: rgba(0,0,0,.8);
+    --text-contrast-color: #000;
+    --light-text-color: rgba(0,0,0,.6);
+    --first-color: #2b92e7;
+    // Font Sizes
+    --font-size-uptitle: 6rem;
+    --font-size-title: 5rem;
+    --font-size-upsubtitle: 2.5rem;
+    --font-size-upparagraph: 2.5rem;
+    --font-size-general: 1.6rem;
+
+    --font-size-projects__title: ;
+    // Font Family
+    --font-family: 'Segoe UI', sans-serif;
+    --second-font-family: 'Fira Code', arial;
+    --third-font-family: 'Segoe Print', arial;
+    // Variety
+    --highlight: #10d5ff;
+    --border-box: rgba(0,0,0,.8);
+    --input-border: rgba(0,0,0,.4);
+    --light-border: rgba(0,0,0,.4);
+}
+
+::selection {
+    background: var(--first-color);
+    color: var(--background-color);
+}
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 *, ::before, ::after {
@@ -26,12 +77,11 @@ body {
     background: var(--background-color);
     color: var(--text-color);
     font-family: var(--font-family);
-    font-size: 1.6rem;
-    padding-bottom: 10rem;
+    font-size: --font-size-general;
 }
 
 .container {
-    width: 1200px;
+    width: 1000px;
     max-width: 90%;
     margin: 0 auto;
 }
@@ -50,4 +100,43 @@ h1,h2,h3,h4,h5,h6,p{
 
 ul {
     padding: 0;
+}
+
+input {
+    outline: none;
+    border: none;
+    color: var(--text-color);
+}
+
+
+
+// CONTENT DEFAULT
+.section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+    margin-bottom: 12rem;
+}
+
+.title {
+    color: var(--text-contrast-color);
+    font-size: var(--font-size-uptitle);
+    display: inline-block;
+    font-weight: 900;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 10;
+}
+
+.title::after {
+    background: var(--first-color);
+    display: block;
+    content: '';
+    width: 105%;
+    height: 1rem;
+    border-radius: 5rem;
+    position: absolute;
+    bottom: .5rem;
+    left: -.5rem;
+    z-index: -1;
 }
