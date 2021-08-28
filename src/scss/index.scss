@@ -37,10 +37,14 @@
     content: '';
     display: inline-block;
     background: var(--text-color);
-    height: 4rem;
+    height: var(--font-size-uptitle);
     width: 1.2rem;
     margin-left: .5rem;
-    animation: fadeOut .7s linear infinite;
+    
+}
+
+.slogan__line--blink {
+    animation: fadeOut .4s linear infinite;
 }
 
 @keyframes fadeOut {
@@ -203,8 +207,15 @@
     }
 }
 
+@media screen and (max-width:368px) {
+    .technologies__wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 .info__paragraph {
+    color: var(--light-text-color);
     line-height: 2;
     font-size: 2rem;
     font-weight: 300;
@@ -256,29 +267,35 @@
     
 
     .navigation__togle {
-        background: #000;
+        background: var(--text-color);
         position: fixed;
         right: -2.5rem;
         bottom: 5rem;
+        height: 2rem;
         width: 10rem;
         padding: 2.5rem;
         border-radius: 3rem;
         cursor: pointer;
-        height: 2rem;
         display: flex;
         align-items: center;
+        z-index: 25;
     }
 
+    .navigation__togle > * {
+        pointer-events: none;
+        transition: transform .3s ease;
+    }
 
     .navigation__icon {
-        fill: var(--text-color);
+        fill: var(--text-reverse-color);
         width: 2rem;
         height: 2rem;
+        position: absolute;
+        transition: opacity .3s ease;
     }
 
-    .navigation__togle--open #menuOpen {
-        visibility: hidden;
-        opacity: 0;
+    .navigation__icon:active {
+        transform: scale(1.5);
     }
 
     .navigation__togle #menuClose {
@@ -286,11 +303,19 @@
         opacity: 0;
     }
 
+    .navigation__togle--open #menuOpen {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .navigation__togle--open #menuClose {
+        visibility: visible;
+        opacity: 1;
+    }
+
     .navigation {
+        background: var(--modal-layer);
         position: fixed;
-        background: rgba(0,0,0,.2);
-        height: 100%;
-        width: 100%;
         top: 0;
         bottom: 0;
         left: 0;
@@ -299,27 +324,18 @@
         justify-content: center;
         align-items: center;
         transform: translateY(0);
-        z-index: 50;
-        visibility: hidden;
+        z-index: 15;
         pointer-events: none;
+        visibility: hidden;
         opacity: 0;
-        transition: opacity .2s ease;
-        animation: fadeOff .01s linear backward;
+        transition: opacity .3s linear;
     }
 
-    @keyframes fadeOff {
-        from {
-            opacity: 0;
-            visibility: hidden;
-        }
-    }
-
-    .navigation--active {
+    .navigation--open {
         visibility: visible;
         pointer-events: all;
         opacity: 1;
     }
-
     .navigation__nav {
         background: var(--wrapper);
         width: 40rem;

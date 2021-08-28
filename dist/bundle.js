@@ -7,15 +7,66 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/js/api.js":
+/*!***********************!*\
+  !*** ./src/js/api.js ***!
+  \***********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"getLanguageTexts\": () => (/* binding */ getLanguageTexts)\n/* harmony export */ });\nasync function getLanguageTexts() {\r\n\ttry {\r\n\t\tconst url = 'https://api.npoint.io/39a2e7bad3aa723d5b65';\r\n\t\tconst request = await fetch(url);\r\n\t\treturn await request.json();\r\n\t} catch (err) {\r\n\t\tconsole.log(err);\r\n\t}\r\n}\r\n\r\n\r\n\n\n//# sourceURL=webpack://personal-portfolio/./src/js/api.js?");
+
+/***/ }),
+
+/***/ "./src/js/classes/typewritter.js":
+/*!***************************************!*\
+  !*** ./src/js/classes/typewritter.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nclass TypeWritter {\r\n    constructor(sloganArr, clickOn) {\r\n        // Content\r\n        this.sloganArr = sloganArr\r\n        this.currentIndex = 0\r\n        this.indexLetter = 0\r\n        this.selectedWord = ''\r\n        this.originalText = ''\r\n        this.isDelating = false;\r\n        this.clickOn = clickOn\r\n        // Times\r\n        this.timeout = 0\r\n        this.timeTyping = 200\r\n        this.timeDelating = 150\r\n        this.timePause = 600\r\n        // Blink\r\n        this.sloganLine = document.querySelector('.slogan__line');\r\n        \r\n    }\r\n\r\n    callFuncions() {\r\n        const sloganText = document.querySelector('.slogan__text')\r\n        sloganText.textContent = this.originalText\r\n        this.selectedWord = this.sloganArr[this.currentIndex]\r\n        \r\n        if(!this.isDelating) {\r\n            this.typing()\r\n        } else {\r\n            this.deleting()\r\n        }\r\n\r\n        let timeout = setTimeout(() => this.callFuncions(), this.timeout); \r\n        if(this.clickOn) {\r\n            clearTimeout(timeout)\r\n            console.log('Click to pause');\r\n        }\r\n    }\r\n\r\n    typing () {\r\n        this.timeout = this.timeTyping\r\n        if(this.originalText === this.selectedWord) {\r\n            this.isDelating = true\r\n            this.sloganLine.classList.add('slogan__line--blink')\r\n            this.timeout = this.timePause\r\n            \r\n        } else {\r\n            this.indexLetter++\r\n        }\r\n        \r\n        // console.log(this.indexLetter);\r\n        this.originalText = this.selectedWord.substring(0, this.indexLetter)\r\n        \r\n    }\r\n    \r\n    deleting() {\r\n        this.timeout = this.timeDelating\r\n        this.indexLetter--\r\n        // Quitar animación\r\n        this.sloganLine.classList.remove('slogan__line--blink')\r\n        // Si cuando está borrando es igual a '' y el cursor a llegado al final del array significa que su cursor debe ser 0 y ejecutar la función de escribir otra vez\r\n        if(this.currentIndex === this.sloganArr.length - 1 && this.originalText === '') {\r\n            this.currentIndex = 0\r\n            this.isDelating = false\r\n            return\r\n        }\r\n        \r\n        // Si el texto está vacio y su estado está en borrar. El tiempo de duración se acorta y lo saca de esta función\r\n        if(this.originalText === '' && this.isDelating) {\r\n            this.isDelating = false\r\n            this.currentIndex++\r\n        }\r\n       \r\n        this.originalText = this.selectedWord.substring(0, this.indexLetter)\r\n        const sloganText = document.querySelector('.slogan__text')\r\n        sloganText.textContent = this.originalText\r\n    }\r\n\r\n    setArrChanged (sloganArr) {\r\n        this.sloganArr = sloganArr\r\n    }\r\n}\r\n\r\nfunction debounce (fn, delay=400) {\r\n    let timeoutId;\r\n    console.log('as');\r\n\r\n    if(timeout) {\r\n        clearTimeout(timeoutId)\r\n    }\r\n    return function(...args) {\r\n        timeoutId = setTimeout(function() {\r\n            fn(...args)\r\n        }, 800);\r\n    }\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TypeWritter);\n\n//# sourceURL=webpack://personal-portfolio/./src/js/classes/typewritter.js?");
+
+/***/ }),
+
+/***/ "./src/js/functions.js":
+/*!*****************************!*\
+  !*** ./src/js/functions.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"navEventClick\": () => (/* binding */ navEventClick)\n/* harmony export */ });\nfunction navEventClick() {\r\n    const navigationToggle = document.querySelector('.navigation__togle');\r\n    const navigationWrapper = document.querySelector('.navigation');\r\n    const navigationLinks = document.querySelector('.navigation__nav');\r\n    // Cuando se presiona un enlace quitar fomatear los enlentos de la navegación\r\n    navigationLinks.addEventListener('click', () => {\r\n        event.target.classList.toggle('navigation__togle--open')\r\n        navigationWrapper.classList.toggle('navigation--open')\r\n    })\r\n\r\n    // Evento de click para abrir el menú\r\n    navigationToggle.addEventListener('click', (event) => {\r\n        event.target.classList.toggle('navigation__togle--open')\r\n        navigationWrapper.classList.toggle('navigation--open')\r\n    })\r\n}\r\n\r\n\r\n\n\n//# sourceURL=webpack://personal-portfolio/./src/js/functions.js?");
+
+/***/ }),
 
 /***/ "./src/js/index.js":
 /*!*************************!*\
   !*** ./src/js/index.js ***!
   \*************************/
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("// Styles\r\n__webpack_require__.e(/*! import() */ \"src_scss_index_scss\").then(__webpack_require__.bind(__webpack_require__, /*! ../scss/index.scss */ \"./src/scss/index.scss\"))\n\n//# sourceURL=webpack://personal-portfolio/./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _classes_typewritter__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./classes/typewritter */ \"./src/js/classes/typewritter.js\");\n/* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./functions */ \"./src/js/functions.js\");\n/* harmony import */ var _intoDOM__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./intoDOM */ \"./src/js/intoDOM.js\");\n/* harmony import */ var _translate__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./translate */ \"./src/js/translate.js\");\n\r\n\r\n\r\n\r\n\r\n// Styles\r\n__webpack_require__.e(/*! import() */ \"src_scss_index_scss\").then(__webpack_require__.bind(__webpack_require__, /*! ../scss/index.scss */ \"./src/scss/index.scss\"))\r\n\r\n\r\nlet language = 'EN'\r\nconst $changeLanguageElements = document.querySelector ('.header__language');\r\n\r\n// In\r\nlet typeWritter;\r\n\r\nconst init = async () => {\r\n    await (0,_translate__WEBPACK_IMPORTED_MODULE_3__.default)(language)\r\n    // Show and hide navigation\r\n    ;(0,_functions__WEBPACK_IMPORTED_MODULE_1__.navEventClick)()\r\n\r\n    const response = await (0,_translate__WEBPACK_IMPORTED_MODULE_3__.default)(language)\r\n    const fullObject = response.object\r\n    const objectTranslated = response.objectLang\r\n    \r\n    // TYPEWRITTER ANIMATION\r\n    const sloganArr = objectTranslated.personal_information.slogan\r\n    typeWritter = new _classes_typewritter__WEBPACK_IMPORTED_MODULE_0__.default(sloganArr)\r\n    typeWritter.callFuncions()\r\n\r\n    // TECHNOLOGY SECTION\r\n    ;(0,_intoDOM__WEBPACK_IMPORTED_MODULE_2__.technologiesDOM)(fullObject.technologies)\r\n\r\n    // PROJECT SETION\r\n    projectsDOM(objectTranslated.projects)\r\n  \r\n}\r\nwindow.addEventListener('load', init)\r\n\r\n\r\nfunction projectsDOM (projects) {\r\n    console.log(projects);\r\n}\r\n\r\n\r\n// Change language on click\r\n$changeLanguageElements.addEventListener('click', async (event) => {\r\n    if(event.target.classList.contains('header__image')) {\r\n        language = event.target.dataset.lang \r\n        // Go to translate de website and get slogan array information\r\n        if(typeWritter) {\r\n            const sloganArr = await (await (0,_translate__WEBPACK_IMPORTED_MODULE_3__.default)(language)).objectLang.personal_information.slogan\r\n            typeWritter.setArrChanged(sloganArr)\r\n        }\r\n    }   \r\n})\n\n//# sourceURL=webpack://personal-portfolio/./src/js/index.js?");
+
+/***/ }),
+
+/***/ "./src/js/intoDOM.js":
+/*!***************************!*\
+  !*** ./src/js/intoDOM.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"paragraphDOM\": () => (/* binding */ paragraphDOM),\n/* harmony export */   \"navbarDOM\": () => (/* binding */ navbarDOM),\n/* harmony export */   \"technologiesDOM\": () => (/* binding */ technologiesDOM)\n/* harmony export */ });\nfunction paragraphDOM (object) {\r\n    // Generar Párrafo por cado uno en el objecto\r\n\tconst paragraphsWrapper = document.querySelector('.info__content');\r\n\tparagraphsWrapper.innerHTML = '';\r\n\tfor (let i = 0; i < object.length; i++) {\r\n\t\tparagraphsWrapper.innerHTML += `\r\n            <p class=\"info__paragraph\">${object[i]}</p>\r\n        `;\r\n\t}\r\n}\r\n\r\nfunction navbarDOM (navContent) {\r\n    const navbarWrapper = document.querySelector('.navigation__nav');\r\n    navbarWrapper.innerHTML = navContent\r\n    .map((link, index) => { \r\n        // Different behind to links that are no redirects to another page\r\n        let target  = '';\r\n        let href = ''\r\n        if(link !== 'linkeding') {\r\n            href = '#' + link\r\n        } else {\r\n            href = 'https://www.linkedin.com/in/lesthoward/'\r\n            target = 'target=\"__blank\"'\r\n        }\r\n\r\n    return` <a class=\"navigation__link\" href=\"${href}\" ${target}>\r\n            <span class=\"navigation__highlight\">0${index}.</span>\r\n            ${link}\r\n        </a> \r\n    `}).join('')\r\n}\r\n\r\n\r\nfunction technologiesDOM (technologies) {\r\n    const technologiesWrapper = document.querySelector('.technologies__wrapper');\r\n    technologiesWrapper.innerHTML = technologies\r\n    .map(tech => `\r\n        <div class=\"technologies__box\">\r\n            <div class=\"technologies__title\">${tech}</div>\r\n        </div>\r\n    `).join('')\r\n}\r\n\r\n\n\n//# sourceURL=webpack://personal-portfolio/./src/js/intoDOM.js?");
+
+/***/ }),
+
+/***/ "./src/js/translate.js":
+/*!*****************************!*\
+  !*** ./src/js/translate.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api */ \"./src/js/api.js\");\n/* harmony import */ var _intoDOM__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./intoDOM */ \"./src/js/intoDOM.js\");\n\r\n\r\n\r\nasync function changeLanguage(lang) {\r\n\tconst object = await (0,_api__WEBPACK_IMPORTED_MODULE_0__.getLanguageTexts)();\r\n\tconst objectLang = object[lang];\r\n\r\n\tconst { personal_information } = objectLang;\r\n\t// First Look in page\r\n\tconst sloganTitle = document.querySelector('.slogan__title');\r\n\tconst sloganArr = document.querySelector('.slogan__text');\r\n\tconst sloganProfession = document.querySelector('.slogan__profession');\r\n\tconst authorParagraph = document.querySelector('.firstlook__paragraph');\r\n\tsloganTitle.textContent = personal_information.slogan_title;\r\n\tsloganArr.textContent = '';\r\n\tsloganProfession.textContent = personal_information.profession;\r\n\tauthorParagraph.textContent = personal_information.description;\r\n\r\n\t// Setion Titles\r\n\tconst { sectionTitle } = objectLang;\r\n\tdocument.querySelector('.title__projects').textContent = sectionTitle[0];\r\n\tdocument.querySelector('.title__technologies').textContent =\r\n\t\tsectionTitle[1];\r\n\tdocument.querySelector('.title__info').textContent = sectionTitle[2];\r\n\r\n\t// Info Section\r\n\tconst { about } = objectLang;\r\n    (0,_intoDOM__WEBPACK_IMPORTED_MODULE_1__.paragraphDOM)(about)\r\n\t\r\n    ;(0,_intoDOM__WEBPACK_IMPORTED_MODULE_1__.navbarDOM)(objectLang.navbar)\r\n\r\n    return {object, objectLang}\r\n}\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (changeLanguage);\r\n\n\n//# sourceURL=webpack://personal-portfolio/./src/js/translate.js?");
 
 /***/ })
 

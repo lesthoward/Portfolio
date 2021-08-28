@@ -2,7 +2,7 @@
     margin-top: 2rem;
 }
 
-.header__wrapper {
+.header__language {
     display: flex;
     justify-content: flex-end;
     gap: 2rem;
@@ -12,6 +12,10 @@
 .header__image {
     height: inherit;
     cursor: pointer;
+}
+
+.header__image *{
+    pointer-events: none
 }
 
 .header__img {
