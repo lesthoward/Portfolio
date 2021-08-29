@@ -1,3 +1,5 @@
+import { singleProjectDOM } from "./intoDOM";
+
 function navEventClick() {
     const navigationToggle = document.querySelector('.navigation__togle');
     const navigationWrapper = document.querySelector('.navigation');
@@ -18,6 +20,39 @@ function navEventClick() {
 }
 
 
+function findProjectInArr (projects, inputValue) {
+    if (projects.length <= 1) return
+    let filteredProject = []
+
+    projects.forEach((singleProject, index) => {
+        singleProject.tools.forEach(uniqueTool => {
+            
+            if(uniqueTool.indexOf(inputValue) >= 0 || singleProject.title.toLowerCase().indexOf(inputValue) > -1) {
+                const existe = filteredProject.some(filteredProject => {
+                    return filteredProject === projects[index]
+                })
+                if(!existe) {
+                    filteredProject.push(projects[index])
+                }
+            }
+        })
+    })
+    singleProjectDOM(filteredProject)
+
+
+    // Filtar todas las tecnologías existentes dentro de los array de objetos
+    // for(let i = 0; i < projects.length; i++) {
+    //     const projectTools = projects[i].tools
+    //     for(let i = 0; i < projectTools.length; i++) {
+    //         if(!toolsArr.includes(projectTools[i])) {
+    //             toolsArr.push(projectTools[i])
+    //         }
+    //     }
+    // }
+
+}
+
 export {
-    navEventClick
+    navEventClick,
+    findProjectInArr
 }

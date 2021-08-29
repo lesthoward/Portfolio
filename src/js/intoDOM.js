@@ -81,6 +81,7 @@ function technologiesDOM (technologies) {
 
 function singleProjectDOM (projects) {
     const projectsContainer = document.querySelector('.projects__grid');
+    projectsContainer.innerHTML = ''
     // Order by rating number in project object
     projects.sort( (a, b) => a['rating'] - b['rating'])
 
@@ -104,18 +105,17 @@ function singleProjectDOM (projects) {
             // Dentro de este contenedor iran todo el HTML, solo se utiliza. No se muestra en el HTML
             const iconWrapper = document.createElement('div');
             // Ordenar los elementos del arreglo (mutable)
-            toolArr.sort(() => -1)
-
+            // toolArr.sort((a, b) => 5- 10)
+            // toolArr.sort()
             toolArr.forEach((singleTool) => {
                 // Obtengo las referencias de las imagenes importadas dentro de los objectos
                 const avaibleIconsName = Object.keys(iconImports)
                 // Comprobar si existe dentro del objeto imports de las imágenes. Así funciona Webpack, es necesitario importar antes, si es desde javascript
-                const existingIcons = avaibleIconsName.includes(singleTool)
+                const existingIcons = avaibleIconsName.includes(singleTool) > -1
                 if(existingIcons) {
                     const iconName = singleTool
                     // Encontrar el nombre dentro del objeto de importaciones
                     const iconImage = iconImports[singleTool]
-                    
                     iconWrapper.innerHTML += iconTemplate (iconName,iconImage)
                 } 
                 
