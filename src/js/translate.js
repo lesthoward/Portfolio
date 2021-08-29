@@ -26,8 +26,7 @@ async function changeLanguage(lang) {
 	// Info Section
 	const { about } = objectLang;
     paragraphDOM(about)
-	
-    navbarDOM(objectLang.navbar)
+    navbarDOM(objectLang.navbar, object)
 
     return {object, objectLang}
 }

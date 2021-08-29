@@ -38,205 +38,134 @@
 			"I like innovate and apply proper techniques to solve a problem by efficient way, so my objective is to take advantage of developments to stenthen the practices.",
 			"One year ago I started in web programming and it was interesting for me to face to a problem that seems impossible and solve it, as they say \"everything has a solution\", which is common whithin scope"
 		],
-		"navbar": ["projects", "technologies", "info", "linkeding"]
+		"navbar": ["projects", "technologies", "info", "linkeding"],
+
+		"projects": [
+			{
+				"title": "Calculator",
+				"description": "Support for IE 11 or higher. This calculator can make possible all math operations and also it may throw some errors if only exist one digit or do result not including two numbers ",
+				"tools": ["html", "css", "javascript", "babel"],
+				"code": "https://github.com/lesthoward/calculator",
+				"preview": "https://lesthoward-calculator.netlify.app/"
+			},
+			{
+				"title": "Nutro Dietas",
+				"description": "Complete web application for a nutritionist, where users can register, login and receive an answer. It is a full CRUD and all data is stored in JSON",
+				"tools": ["html", "sass", "javascript", "gulp", "json"],
+				"code": "https://github.com/lesthoward/diet",
+				"rating": 8
+			},
+			{
+				"title": "Hangman Game",
+				"description": "Hangman game, guess the word. If you type a wrong letter it will be displayed on the screen and you will see the body parts",
+				"tools": ["html", "css", "javascript"],
+				"code": "https://github.com/lesthoward/hangman",
+				"preview": "https://lesthoward-hangman.netlify.app/",
+				"rating": 6
+			},
+			{
+				"title": "Tying Game",
+				"description": "Type as fast as you can before the time runs out, you can also set a difficulty and earn more time for each correct word",
+				"tools": ["html", "css", "javascript"],
+				"code": "https://github.com/lesthoward/typing-game",
+				"preview": "https://lesthoward-typing-game.netlify.app/",
+				"rating": 6
+			},
+			{
+				"title": "Meal Finder API",
+				"description": "Search for meals and click on each one to open details coming from TheMealDB API",
+				"tools": ["html", "css", "javascript"],
+				"code": "https://github.com/lesthoward/meal-finder",
+				"preview": "https://lesthoward-meal-finder.netlify.app",
+				"rating": 6.5
+			},
+			{
+				"title": "Puzzle",
+				"description": "One of my first codes in JavaScript. It is a puzzle of 16 pieces that you can do randomly, count your moves and win. Let's see",
+				"tools": ["html", "css", "javascript"],
+				"code": "https://github.com/lesthoward/puzzle",
+				"preview": "https://lesthoward-puzzle.netlify.app/",
+				"rating": 4
+			},
+			{
+				"title": "Stric Form Validator",
+				"description": "Strict client-side form validator that includes the debounce technique and It gonna displays success and error messages depending for the correct data",
+				"tools": ["html", "css", "javascript"],
+				"code": "https://github.com/lesthoward/strict-form-validator",
+				"preview": "https://lesthoward-strict-form-validator.netlify.app/"
+			},
+			{
+				"title": "List To Do",
+				"description": "Strict client-side form validator that includes the debounce technique and It gonna displays success and error messages depending for the correct data",
+				"tools": ["html", "css", "javascript", "pug"],
+				"code": "https://github.com/lesthoward/todo",
+				"preview": "https://lesthoward-todo.netlify.app/"
+			},
+			{
+				"title": "Booking Movie Seat",
+				"description": "Choose a multiple seats are not occupied and book them to be shown on the screen how much you have to pay for that",
+				"tools": ["html", "sass", "javascript"],
+				"code": "https://github.com/lesthoward/movie",
+				"preview": "https://lesthoward-movie-seat-booking.netlify.app/"
+			},
+			{
+				"title": "Strength Password",
+				"description": "To pass by successful validation the password must meet complexity requirements, otherwise, it will show what needs to be completed",
+				"tools": ["html", "css", "javascript"],
+				"code": "https://github.com/lesthoward/strength-password",
+				"preview": "https://lesthoward-strength-password.netlify.app/"
+			},
+			{
+				"title": "Strength Password",
+				"description": "To pass successful validation the password must meet complexity requirements, otherwise, it will show what needs to be completed",
+				"tools": ["html", "css", "javascript"],
+				"code": "https://github.com/lesthoward/strength-password",
+				"preview": "https://lesthoward-strength-password.netlify.app/"
+			},
+			{
+				"title": "Search Suggestions",
+				"description": "When key is pressed, some suggestions from array will be displayed",
+				"tools": ["html", "css", "javascript"],
+				"code": "https://github.com/lesthoward/search-suggestions",
+				"preview": "https://lesthoward-search-suggestions.netlify.app/"
+			},
+			{
+				"title": "Highlighted Word",
+				"description": "Type and get the highlighted word in the text",
+				"tools": ["html", "css", "javascript"],
+				"code": "https://github.com/lesthoward/marked-text",
+				"preview": "https://lesthoward-marked-text.netlify.app/"
+			},
+			{
+				"title": "Product Card",
+				"description": "Dynamic shoe card, specially designed for an ecommerce. Where you can choose the color and size accompanied by a nice user interface ",
+				"tools": ["html", "css", "javascript"],
+				"code": "https://github.com/lesthoward/product-card",
+				"preview": "https://lesthoward-product-card.netlify.app"
+			},
+			{
+				"title": "Music Player",
+				"description": "Play the music you get from array and do it previous and next as you like",
+				"tools": ["html", "css", "javascript"],
+				"code": "https://github.com/lesthoward/music-player",
+				"preview": "https://lesthoward-music-player.netlify.app/"
+			},
+			{
+				"title": "Infinite Scroll",
+				"description": "As you scroll down it will display more content and include a search bar to filter on both the title and descriptions of the posts",
+				"tools": ["html", "css", "javascript"],
+				"code": "https://github.com/lesthoward/infinite-scroll",
+				"preview": "https://lesthoward-infinite-scroll.netlify.app/"
+			},
+			{
+				"title": "Accordion",
+				"description": "Useful when the content is to be shown or hidden by user choice",
+				"tools": ["html", "css", "javascript"],
+				"code": "https://github.com/lesthoward/accordion",
+				"preview": "https://lesthoward-accordion.netlify.app/"
+			}
+		]
 	},
-	"projects": [
-		{
-			"title": "Calculator",
-			"description": "Support for IE 11 or higher. This calculator can make possible all math operations and also it may throw some errors if only exist one digit or do result not including two numbers ",
-			"tools": [
-				"html",
-				"css",
-				"javascript",
-				"babel"
-			],
-			"code":"https://github.com/lesthoward/calculator",
-			"preview": "https://lesthoward-calculator.netlify.app/"
-		},
-		{
-			"title": "Nutro Dietas",
-			"description": "Complete web application for a nutritionist, where users can register, login and receive an answer. It is a full CRUD and all data is stored in JSON",
-			"tools": [
-				"html",
-				"sass",
-				"javascript",
-				"gulp",
-				"json"
-			],
-			"code":"https://github.com/lesthoward/diet",
-			"rating": 8
-		},
-		{
-			"title": "Hangman Game",
-			"description": "Hangman game, guess the word. If you type a wrong letter it will be displayed on the screen and you will see the body parts",
-			"tools": [
-				"html",
-				"css",
-				"javascript"
-			],
-			"code":"https://github.com/lesthoward/hangman",
-			"preview":"https://lesthoward-hangman.netlify.app/",
-			"rating": 6
-		},
-		{
-			"title": "Tying Game",
-			"description": "Type as fast as you can before the time runs out, you can also set a difficulty and earn more time for each correct word",
-			"tools": [
-				"html",
-				"css",
-				"javascript"
-			],
-			"code":"https://github.com/lesthoward/typing-game",
-			"preview":"https://lesthoward-typing-game.netlify.app/",
-			"rating": 6
-		},
-		{
-			"title": "Meal Finder API",
-			"description": "Search for meals and click on each one to open details coming from TheMealDB API",
-			"tools": [
-				"html",
-				"css",
-				"javascript"
-			],
-			"code":"https://github.com/lesthoward/meal-finder",
-			"preview":"https://lesthoward-meal-finder.netlify.app",
-			"rating": 6.5
-		},
-		{
-			"title": "Puzzle",
-			"description": "One of my first codes in JavaScript. It is a puzzle of 16 pieces that you can do randomly, count your moves and win. Let's see",
-			"tools": [
-				"html",
-				"css",
-				"javascript"
-			],
-			"code":"https://github.com/lesthoward/puzzle",
-			"preview":"https://lesthoward-puzzle.netlify.app/",
-			"rating": 4
-		},
-		{
-			"title": "Stric Form Validator",
-			"description": "Strict client-side form validator that includes the debounce technique and It gonna displays success and error messages depending for the correct data",
-			"tools": [
-				"html",
-				"css",
-				"javascript"
-			],
-			"code":"https://github.com/lesthoward/strict-form-validator",
-			"preview":"https://lesthoward-strict-form-validator.netlify.app/"
-		},
-		{
-			"title": "List To Do",
-			"description": "Strict client-side form validator that includes the debounce technique and It gonna displays success and error messages depending for the correct data",
-			"tools": [
-				"html",
-				"css",
-				"javascript",
-				"pug"
-			],
-			"code":"https://github.com/lesthoward/todo",
-			"preview":"https://lesthoward-todo.netlify.app/"
-		},
-		{
-			"title": "Booking Movie Seat",
-			"description": "Choose a multiple seats are not occupied and book them to be shown on the screen how much you have to pay for that",
-			"tools": [
-				"html",
-				"sass",
-				"javascript"
-			],
-			"code":"https://github.com/lesthoward/movie",
-			"preview":"https://lesthoward-movie-seat-booking.netlify.app/"
-		},
-		{
-			"title": "Strength Password",
-			"description": "To pass by successful validation the password must meet complexity requirements, otherwise, it will show what needs to be completed",
-			"tools": [
-				"html",
-				"css",
-				"javascript"
-			],
-			"code":"https://github.com/lesthoward/strength-password",
-			"preview":"https://lesthoward-strength-password.netlify.app/"
-		},
-		{
-			"title": "Strength Password",
-			"description": "To pass successful validation the password must meet complexity requirements, otherwise, it will show what needs to be completed",
-			"tools": [
-				"html",
-				"css",
-				"javascript"
-			],
-			"code":"https://github.com/lesthoward/strength-password",
-			"preview":"https://lesthoward-strength-password.netlify.app/"
-		},
-		{
-			"title": "Search Suggestions",
-			"description": "When key is pressed, some suggestions from array will be displayed",
-			"tools": [
-				"html",
-				"css",
-				"javascript"
-			],
-			"code":"https://github.com/lesthoward/search-suggestions",
-			"preview":"https://lesthoward-search-suggestions.netlify.app/"
-		},
-		{
-			"title": "Highlighted Word",
-			"description": "Type and get the highlighted word in the text",
-			"tools": [
-				"html",
-				"css",
-				"javascript"
-			],
-			"code":"https://github.com/lesthoward/marked-text",
-			"preview":"https://lesthoward-marked-text.netlify.app/"
-		},
-		{
-			"title": "Product Card",
-			"description": "Dynamic shoe card, specially designed for an ecommerce. Where you can choose the color and size accompanied by a nice user interface ",
-			"tools": [
-				"html",
-				"css",
-				"javascript"
-			],
-			"code":"https://github.com/lesthoward/product-card",
-			"preview":"https://lesthoward-product-card.netlify.app"
-		},
-		{
-			"title": "Music Player",
-			"description": "Play the music you get from array and do it previous and next as you like",
-			"tools": [
-				"html",
-				"css",
-				"javascript"
-			],
-			"code":"https://github.com/lesthoward/music-player",
-			"preview":"https://lesthoward-music-player.netlify.app/"
-		},
-		{
-			"title": "Infinite Scroll",
-			"description": "As you scroll down it will display more content and include a search bar to filter on both the title and descriptions of the posts",
-			"tools": [
-				"html",
-				"css",
-				"javascript"
-			],
-			"code":"https://github.com/lesthoward/infinite-scroll",
-			"preview":"https://lesthoward-infinite-scroll.netlify.app/"
-		},
-		{
-			"title": "Accordion",
-			"description": "Useful when the content is to be shown or hidden by user choice",
-			"tools": [
-				"html",
-				"css",
-				"javascript"
-			],
-			"code":"https://github.com/lesthoward/accordion",
-			"preview":"https://lesthoward-accordion.netlify.app/"
-		}
-	],
 	"technologies": [
 		"HTML5",
 		"CSS3",

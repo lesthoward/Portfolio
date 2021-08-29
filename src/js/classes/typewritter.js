@@ -1,5 +1,5 @@
 class TypeWritter {
-    constructor(sloganArr, clickOn) {
+    constructor(sloganArr, clickOn='') {
         // Content
         this.sloganArr = sloganArr
         this.currentIndex = 0
@@ -10,9 +10,9 @@ class TypeWritter {
         this.clickOn = clickOn
         // Times
         this.timeout = 0
-        this.timeTyping = 200
+        this.timeTyping = 180
         this.timeDelating = 150
-        this.timePause = 600
+        this.timePause = 700
         // Blink
         this.sloganLine = document.querySelector('.slogan__line');
         
@@ -77,20 +77,6 @@ class TypeWritter {
 
     setArrChanged (sloganArr) {
         this.sloganArr = sloganArr
-    }
-}
-
-function debounce (fn, delay=400) {
-    let timeoutId;
-    console.log('as');
-
-    if(timeout) {
-        clearTimeout(timeoutId)
-    }
-    return function(...args) {
-        timeoutId = setTimeout(function() {
-            fn(...args)
-        }, 800);
     }
 }
 

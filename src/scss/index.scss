@@ -136,7 +136,6 @@
     font-size: 1.8rem;
     line-height: 1.5;
     height: 14rem;
-    max-height: 18rem;
     font-weight: lighter;
     overflow: hidden;
 }
@@ -144,7 +143,31 @@
 .projects__technologies {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     gap: 1rem;
+}
+
+.project__image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.project__image:hover::before {
+    background: var(--text-color);
+    color: var(--background-color);
+    content: attr(data-name);
+    display: block;
+    padding: .7rem;
+    border-radius: .1rem;
+    font-size: 5;
+    text-transform: uppercase;
+    text-align: center;
+    position: absolute;
+    transform: translateY(-150%);
+    font-weight: 900;
+
+    font-family: var(--second-font-family);
 }
 
 .projects__icon {
@@ -152,8 +175,19 @@
     height: 3rem;
 }
 
+.projects__icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .projects__icon:hover {
     transform: scale(1.3)
+}
+
+.projects__noicon {
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .projects__buttons {
