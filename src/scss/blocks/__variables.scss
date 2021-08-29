@@ -18,6 +18,7 @@
     --font-size-upsubtitle: 2.5rem;
     --font-size-upparagraph: 2.5rem;
     --font-size-general: 1.6rem;
+    --card-font-size: 1.5rem;
 
     --font-size-projects__title: ;
     // Font Family
@@ -30,6 +31,7 @@
     --input-border: rgba(255,255,255,.4);
     --light-border: rgba(255,255,255,.4);
     --modal-layer: rgba(0,0,0,.2);
+    --warning-message: #FF6F59;
 }
 
 .light {
@@ -78,7 +80,7 @@ body {
     background: var(--background-color);
     color: var(--text-color);
     font-family: var(--font-family);
-    font-size: --font-size-general;
+    font-size: var(--font-size-general);
 }
 
 .container {

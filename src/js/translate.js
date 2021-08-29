@@ -28,6 +28,19 @@ async function changeLanguage(lang) {
     paragraphDOM(about)
     navbarDOM(objectLang.navbar, object)
 
+
+
+	// Variety
+	// ==== Loaders
+	document.querySelector('.loading__more--text').innerText = objectLang.variety.loader[0]
+	document.querySelector('.loading__expandall--text').textContent = objectLang.variety.loader[1]
+	document.querySelector('.loading__fullprojects--text').textContent = objectLang.variety.loader[2]
+	document.querySelector('.loading__complete').textContent = objectLang.variety.loader[3]
+	// ==== Input search project
+	// Loaded Message
+
+
+
     return {object, objectLang}
 }
 export default changeLanguage;

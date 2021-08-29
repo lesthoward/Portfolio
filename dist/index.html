@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="2260bc2e9b241c82abf5.svg" type="image/x-icon">
     <!-- Normalize -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css'/>
+    <!-- Google Font -->
 <script defer src="bundle.js"></script></head>
 <body class="dark">
     
@@ -60,15 +61,33 @@
         <!-- firstlook -->
 
         <div class="container">
-            <section class="projects section">
+            <section class="projects section" id="projects">
                 <div class="info">
-                    <h2 class="title title__projects" id="projects"><!-- ! JavaScript --></h2> </div>
+                    <h2 class="title title__projects" ><!-- ! JavaScript --></h2> </div>
                 <!-- info -->
                 <form class="form">
                     <input class="form__input" type="search" placeholder="Filtra por tecnología o herramientas" id="searchProject">
                 </form>
                 <!-- form -->
                 <div class="projects__grid"> <!-- ! Javascript --> </div>
+
+                <!-- !    ↓ JavaScript -->
+                <div class="loading__complete "></div>
+                <div class="projects__loading">
+                    <div class="loading__more">
+                        <span class="loading__more--text"></span>
+                        <span class="loading__quantiy">(*)</span>
+                    </div>
+                    <div class="loading__expandall">
+                        <span class="loading__expandall--text"></span>
+                        <span class="loading__quantiy">(**)</span>
+                    </div>
+                    <a class="loading__fullprojects" href="https://github.com/lesthoward?tab=repositories" target="_blank">
+                        <span class="loading__fullprojects--text"></span>
+                        <span class="redirect__link" >(Github)</span>
+                    </a>
+                </div>
+                <span class="scroll"></span>
                 <!-- projects__grid -->
             </section>
             <!-- projects -->

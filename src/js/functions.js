@@ -21,6 +21,7 @@ function navEventClick() {
 
 
 function findProjectInArr (projects, inputValue) {
+    // Evitar problemas
     if (projects.length <= 1) return
     let filteredProject = []
 
@@ -37,18 +38,8 @@ function findProjectInArr (projects, inputValue) {
             }
         })
     })
-    singleProjectDOM(filteredProject)
-
-
-    // Filtar todas las tecnologías existentes dentro de los array de objetos
-    // for(let i = 0; i < projects.length; i++) {
-    //     const projectTools = projects[i].tools
-    //     for(let i = 0; i < projectTools.length; i++) {
-    //         if(!toolsArr.includes(projectTools[i])) {
-    //             toolsArr.push(projectTools[i])
-    //         }
-    //     }
-    // }
+    console.log(filteredProject);
+    singleProjectDOM(filteredProject, filteredProject.length)
 
 }
 

@@ -78,15 +78,23 @@ function technologiesDOM (technologies) {
 
 
 
-
-function singleProjectDOM (projects) {
+function singleProjectDOM (projects, condicionalLength = 0) {
     const projectsContainer = document.querySelector('.projects__grid');
     projectsContainer.innerHTML = ''
+    // NO FUNCIONA POR EL FUNCIONAMIENTO DEL RETURN DEL MAP, ESTÁ POR INDEX. PARA SOLUCIONAR DEBE SER AL ARREGLO LA RESTRICCIÓN
     // Order by rating number in project object
-    projects.sort( (a, b) => a['rating'] - b['rating'])
+    // projects.sort( (a, b) => {
+    //     !a['rating'] ? a['rating'] = 0 : null
+    //     !b['rating'] ? b['rating']= 0 : null
+
+    //     console.log(a['rating'], b[['rating']]);
+    //     return a['rating'] + b['rating'] 
+    // })
 
     projectsContainer.innerHTML = projects
-    .map(singleProject => {
+    .map((singleProject, index) => {
+        
+        
         let {title, description, preview, code, tools} = singleProject
         // Si el botón tiene un enlace de vista preview quiero mostrarlo, sino no hagas nada
         let btnPreview = ''
@@ -133,32 +141,85 @@ function singleProjectDOM (projects) {
                     </div>`
         }
 
-        return `
-        <div class="projects__box">
-            <div class="projects__info">
-                <h4 class="projects__title">${title}</h4>
-                <!-- projects__title -->
-                <p class="projects__description">${description}</p>
-                <!-- projects__description -->
-            </div>
-            <!-- projects__info -->
-            <div class="projects__technologies">
-                ${getTechnologyIcon(singleProject.tools)}
-            </div>
-            <!-- projects__technologies -->
-            <div class="projects__buttons">
-                ${btnPreview}
-                <a class="project__btn" id="code" href="${code}" target="_blank">Code source</a>
-            </div>
-            <!-- projects__buttons -->
-        </div>
-        `
-    }).join('')
+        while(index < condicionalLength) {
+            return `
+            <div class="projects__box">
+                <div class="projects__info">
+                        <h4 class="projects__title">${title}</h4>
+                        <!-- projects__title -->
+                        <p class="projects__description">${description}</p>
+                        <!-- projects__description -->
+                    </div>
+                    <!-- projects__info -->
+                    <div class="projects__technologies">
+                        ${getTechnologyIcon(singleProject.tools)}
+                    </div>
+                    <!-- projects__technologies -->
+                    <div class="projects__buttons">
+                        ${btnPreview}
+                        <a class="project__btn" id="code" href="${code}" target="_blank">Code source</a>
+                    </div>
+                    <!-- projects__buttons -->
+                </div>
+                `
+        }
+        }).join('')
+
+
+}
+
+function loadMoreProjectsDOM (objectTranslated) {
+    let loadmore = 3
+    let contentLoaded;
+    document.querySelector('.loading__expandall .loading__quantiy')
+        .textContent = `(${objectTranslated.projects.length})`
+
+    document.querySelector('.loading__more .loading__quantiy')
+        .textContent = `(${loadmore})`
+
+    const $messageLoadedDOM = document.querySelector('.loading__complete'); 
+    const scroll = document.querySelector('.scroll');
+    // Load only 3 items more
+    document.querySelector('.loading__more')
+    .addEventListener('click', (e) => {
+        loadmore += 3
+        
+        if(!contentLoaded) {
+            singleProjectDOM(objectTranslated.projects, loadmore)
+        } else {
+            $messageLoadedDOM.style.display = 'block'
+            setTimeout(function() {
+                $messageLoadedDOM.style.display = 'none'
+            }, 3000);
+        }
+        
+        if(loadmore > objectTranslated.projects.length){
+            contentLoaded = true
+        }
+        window.scroll(0, scroll.offsetTop - window.innerHeight +50)
+    })
+
+
+    // Expand All
+    document.querySelector('.loading__expandall')
+    .addEventListener('click', (e) => {
+        if(!contentLoaded) {
+            singleProjectDOM(objectTranslated.projects, objectTranslated.projects.length)
+        } else {
+            $messageLoadedDOM.style.display = 'block'
+            setTimeout(function() {
+                $messageLoadedDOM.style.display = 'none'
+            }, 3000);
+        }
+        window.scroll(0, scroll.offsetTop - window.innerHeight +50)
+        contentLoaded = true
+    })
 }
 
 export {
     paragraphDOM,
     navbarDOM,
     technologiesDOM,
-    singleProjectDOM
+    singleProjectDOM,
+    loadMoreProjectsDOM
 }

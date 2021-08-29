@@ -1,6 +1,6 @@
 import TypeWritter from './classes/typewritter';
-import { navEventClick, findProjectInArr } from './functions'
-import { singleProjectDOM, technologiesDOM } from './intoDOM';
+import { navEventClick, findProjectInArr, } from './functions'
+import { singleProjectDOM, technologiesDOM, loadMoreProjectsDOM } from './intoDOM';
 import changeLanguage from './translate'
 
 // Styles
@@ -35,7 +35,9 @@ const init = async () => {
 
     // PROJECT SETION
     projectSection(objectTranslated.projects)
-  
+
+    // LOADMORE (PROJECT SETION)
+    loadMoreProjectsDOM(objectTranslated)
 }
 window.addEventListener('load', init)
 
@@ -56,18 +58,18 @@ $changeLanguageElements.addEventListener('click', async (event) => {
             typeWritter.setArrChanged(sloganArr)
 
             projectSection(objectTranslated.projects)
+            loadMoreProjectsDOM(objectTranslated)
         }
     }   
 })
 
 
 function projectSection (projects) {
-    singleProjectDOM(projects)
-    // findProjectInArr(objectTranslated.projects)
+    singleProjectDOM(projects, 3)
 
     const $seachProject = document.querySelector('#searchProject')
     .addEventListener('input', (e) => {
         findProjectInArr(objectTranslated.projects, e.target.value.toLowerCase().trim())
     })
-
+    
 }

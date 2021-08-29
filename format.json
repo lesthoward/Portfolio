@@ -7,13 +7,136 @@
 			"slogan_title": "Hazlo",
 			"slogan": ["Óptimo", "Responsivo", "Escalable"]
 		},
-		"sectionTitle": ["Proyectos", "Tecnologías", "Más"],
+		"sectionTitle": ["Proyectos", "Habilidades", "Más"],
 		"about": [
 			"Me gusta innovar y aplicar técnicas apropiadas para resolver un enfoque de forma óptima, por lo tanto mi objetivo es aprovechar de las  experiencias en los desarrollos para fortalecer las prácticas.",
 			"Hace un año desde que empecé en la programación web y me resultó interesante enfretarme a un problema que parece imposible y al final se termina solucionando, como bien se dice \"todo tiene una solución\", lo que es común dentro de este ámbito."
 		],
-		"navbar": ["projects", "technologies", "info", "linkeding"],
-		"projects": [{}]
+		"navbar": ["Proyectos", "Habilidades", "Más", "linkeding"],
+		"variety": {
+			"loader": ["cargar más", "expandir todo", "ver todo", "No hay más para mostrar"],
+			"inputFilter": "Filter by technology or tool"
+		},
+		"projects": [
+			{
+				"title": "Calculadora",
+				"description": "Soporte para navegadores antiguos IE 8. Permite ejecutar cualquier operación matemática, adicionalmente arrojará errores si solo se ingresa un número o dar resultado sin incluir dos números",
+				"tools": ["html", "css", "javascript", "babel"],
+				"code": "https://github.com/lesthoward/calculator",
+				"preview": "https://lesthoward-calculator.netlify.app/",
+				"rating": 8
+			},
+			{
+				"title": "Nutro Dietas",
+				"description": "Aplicación web completa para un nutricionista, donde los usuarios pueden registrarse, iniciar sesión y recibir preguntas. Un GRID completo y todos los datos son almacenados en un JSON",
+				"tools": ["html", "sass", "javascript", "gulp", "json"],
+				"code": "https://github.com/lesthoward/diet",
+				"rating": 1000
+			},
+			{
+				"title": "Juego de ahorcado",
+				"description": "Juego de ahorcado, adivina la palabra. Si tecleas una palabra incorrecta te la mostrará en panlla y podrás ir viendo las partes del cuerpo",
+				"tools": ["html", "css", "javascript"],
+				"code": "https://github.com/lesthoward/hangman",
+				"preview": "https://lesthoward-hangman.netlify.app/",
+				"rating": 6
+			},
+			{
+				"title": "Juego de tipografía",
+				"description": "Escribe tan rápido como puedas. Establece una dificultad y por cada pregunta correcta ganarás tiempo",
+				"tools": ["html", "css", "javascript"],
+				"code": "https://github.com/lesthoward/typing-game",
+				"preview": "https://lesthoward-typing-game.netlify.app/",
+				"rating": 5
+			},
+			{
+				"title": "Buscador de comida API",
+				"description": "Busca comidas y has click para expandir información adicionar y ver los ingredientes y otros detalles provenientes de TheMealAPI",
+				"tools": ["html", "css", "javascript"],
+				"code": "https://github.com/lesthoward/meal-finder",
+				"preview": "https://lesthoward-meal-finder.netlify.app",
+				"rating": 7
+			},
+			{
+				"title": "Rompecabezas",
+				"description": "Uno de mis primeros proyectos. Un rompecabezas de 16 piezas que puedes tirar aleatorias, contar tus movimientos y ganar.",
+				"tools": ["html", "css", "javascript"],
+				"code": "https://github.com/lesthoward/puzzle",
+				"preview": "https://lesthoward-puzzle.netlify.app/",
+				"rating": 5
+			},
+			{
+				"title": "Validación de formularios estricto",
+				"description": "Formulario estricto del lado del cliente que incluye la técnica de debounce y mostrará mensajes de éxito y error dependiendo del correcto formato",
+				"tools": ["html", "css", "javascript"],
+				"code": "https://github.com/lesthoward/strict-form-validator",
+				"preview": "https://lesthoward-strict-form-validator.netlify.app/",
+				"rating": 9
+			},
+			{
+				"title": "Lista de tareas",
+				"description": "Añade, elimina y categoriza las tareas. Esencial para organizar la rutina diaria",
+				"tools": ["html", "css", "javascript", "pug"],
+				"code": "https://github.com/lesthoward/todo",
+				"preview": "https://lesthoward-todo.netlify.app/"
+			},
+			{
+				"title": "Reserva de asientos",
+				"description": "Elija múltiples asientos que no estén ocupados y reservelos para que se muestre en pantalla cuanto será el monto total",
+				"tools": ["html", "sass", "javascript"],
+				"code": "https://github.com/lesthoward/movie",
+				"preview": "https://lesthoward-movie-seat-booking.netlify.app/"
+			},
+			{
+				"title": "Contraseña fuerte",
+				"description": "Para pasar una validación exitosa la contraseña debe cumplir con la complejidad de los requerimientos, de lo contrario, se mostrará en pantalla lo que debe completar",
+				"tools": ["html", "css", "javascript"],
+				"code": "https://github.com/lesthoward/strength-password",
+				"preview": "https://lesthoward-strength-password.netlify.app/"
+			},
+			{
+				"title": "Sugerencia de búsqueda",
+				"description": "Cuando se presiona una tecla se mostrarán alguna sugerencias que provienen de un arreglo",
+				"tools": ["html", "css", "javascript"],
+				"code": "https://github.com/lesthoward/search-suggestions",
+				"preview": "https://lesthoward-search-suggestions.netlify.app/"
+			},
+			{
+				"title": "Palabra resultada",
+				"description": "Escribe y ve el resultado de palabras resaltado en el texto",
+				"tools": ["html", "css", "javascript"],
+				"code": "https://github.com/lesthoward/marked-text",
+				"preview": "https://lesthoward-marked-text.netlify.app/"
+			},
+			{
+				"title": "Tarjeta de producto",
+				"description": "Una tarjeta dinámica de un producto de zapato diseñado para un E- COMMERCE, donde podrás elegir los colores y tamaño acompañado de una bonito diseño",
+				"tools": ["html", "css", "javascript"],
+				"code": "https://github.com/lesthoward/product-card",
+				"preview": "https://lesthoward-product-card.netlify.app"
+			},
+			{
+				"title": "Reproductor de música",
+				"description": "Pon música en el reproductor, pasa a la siguiente o regresa. Provienen de un arreglo de datos ",
+				"tools": ["html", "css", "javascript"],
+				"code": "https://github.com/lesthoward/music-player",
+				"preview": "https://lesthoward-music-player.netlify.app/"
+			},
+			{
+				"title": "Deslizamiento infinito",
+				"description": "De forma que vayas deslizando hacia abajo te mostrará más contenido e incluye una barra de búsqueda para filtrar las publicaciones en el título o descripción",
+				"tools": ["html", "css", "javascript"],
+				"code": "https://github.com/lesthoward/infinite-scroll",
+				"preview": "https://lesthoward-infinite-scroll.netlify.app/"
+			},
+			{
+				"title": "Acordeón",
+				"description": "Útil cuando el contenido será mostrado o oculto por elección del usuario",
+				"tools": ["html", "css", "javascript"],
+				"code": "https://github.com/lesthoward/accordion",
+				"preview": "https://lesthoward-accordion.netlify.app/"
+			}
+		]
 	},
 	"EN": {
 		"personal_information": {
@@ -23,7 +146,7 @@
 			"slogan_title": "Make it",
 			"slogan": ["Light", "Responsive", "Scalable"]
 		},
-		"sectionTitle": ["Projects", "Technologies", "About"],
+		"sectionTitle": ["projects", "skills", "about"],
 		"technologies": [
 			"HTML5",
 			"CSS3",
@@ -38,8 +161,11 @@
 			"I like innovate and apply proper techniques to solve a problem by efficient way, so my objective is to take advantage of developments to stenthen the practices.",
 			"One year ago I started in web programming and it was interesting for me to face to a problem that seems impossible and solve it, as they say \"everything has a solution\", which is common whithin scope"
 		],
-		"navbar": ["projects", "technologies", "info", "linkeding"],
-
+		"navbar": ["projects", "skills", "about", "linkeding"],
+		"variety": {
+			"loader": ["Load more", "Expand All", "View All", "Everything has been loaded"],
+			"inputFilter": "Filter by technology or tool"
+		},
 		"projects": [
 			{
 				"title": "Calculator",
@@ -77,7 +203,7 @@
 				"tools": ["html", "css", "javascript"],
 				"code": "https://github.com/lesthoward/meal-finder",
 				"preview": "https://lesthoward-meal-finder.netlify.app",
-				"rating": 6.5
+				"rating": 6
 			},
 			{
 				"title": "Puzzle",
@@ -96,7 +222,7 @@
 			},
 			{
 				"title": "List To Do",
-				"description": "Strict client-side form validator that includes the debounce technique and It gonna displays success and error messages depending for the correct data",
+				"description": "Add, delete and categorize task. Essentially to organize the daily routine",
 				"tools": ["html", "css", "javascript", "pug"],
 				"code": "https://github.com/lesthoward/todo",
 				"preview": "https://lesthoward-todo.netlify.app/"
@@ -111,13 +237,6 @@
 			{
 				"title": "Strength Password",
 				"description": "To pass by successful validation the password must meet complexity requirements, otherwise, it will show what needs to be completed",
-				"tools": ["html", "css", "javascript"],
-				"code": "https://github.com/lesthoward/strength-password",
-				"preview": "https://lesthoward-strength-password.netlify.app/"
-			},
-			{
-				"title": "Strength Password",
-				"description": "To pass successful validation the password must meet complexity requirements, otherwise, it will show what needs to be completed",
 				"tools": ["html", "css", "javascript"],
 				"code": "https://github.com/lesthoward/strength-password",
 				"preview": "https://lesthoward-strength-password.netlify.app/"
