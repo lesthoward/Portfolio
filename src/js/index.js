@@ -9,7 +9,7 @@ import('../scss/index.scss')
 
 
 
-let language = 'EN'
+let language = 'ES'
 const $changeLanguageElements = document.querySelector ('.header__language');
 // Class Instance
 let typeWritter;

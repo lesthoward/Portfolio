@@ -83,17 +83,18 @@ function singleProjectDOM (projects, condicionalLength = 0) {
     projectsContainer.innerHTML = ''
     // NO FUNCIONA POR EL FUNCIONAMIENTO DEL RETURN DEL MAP, ESTÁ POR INDEX. PARA SOLUCIONAR DEBE SER AL ARREGLO LA RESTRICCIÓN
     // Order by rating number in project object
-    // projects.sort( (a, b) => {
-    //     !a['rating'] ? a['rating'] = 0 : null
-    //     !b['rating'] ? b['rating']= 0 : null
+        projects.sort((a, b) => {
+            !a['rating'] ? a['rating'] = 1 : null
+            !b['rating'] ? b['rating']= 1 : null
 
-    //     console.log(a['rating'], b[['rating']]);
-    //     return a['rating'] + b['rating'] 
-    // })
+            // Es importante que el a le reste a b 
+            return b['rating'] - a['rating']
+        })
+        console.log(projects);
 
     projectsContainer.innerHTML = projects
     .map((singleProject, index) => {
-        
+
         
         let {title, description, preview, code, tools} = singleProject
         // Si el botón tiene un enlace de vista preview quiero mostrarlo, sino no hagas nada
@@ -161,7 +162,7 @@ function singleProjectDOM (projects, condicionalLength = 0) {
                     </div>
                     <!-- projects__buttons -->
                 </div>
-                `
+              `
         }
         }).join('')
 
