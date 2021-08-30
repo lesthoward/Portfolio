@@ -171,7 +171,13 @@ function singleProjectDOM (projects, condicionalLength = 0) {
 function loadMoreProjectsDOM (objectTranslated) {
     let loadmore = 3
     let contentLoaded;
-    let adiccionalHeight = 150
+    let adiccionalHeight = 50
+    const mediaWidth = window.matchMedia('(min-width:768px)').matches
+    if(mediaWidth) {
+        adiccionalHeight = 200
+    }
+
+
     document.querySelector('.loading__expandall .loading__quantiy')
         .textContent = `(${objectTranslated.projects.length})`
 
@@ -197,7 +203,6 @@ function loadMoreProjectsDOM (objectTranslated) {
         if(loadmore > objectTranslated.projects.length){
             contentLoaded = true
         }
-        console.log(scroll.offsetTop, window.innerHeight);
         window.scroll(0, scroll.offsetTop + adiccionalHeight)
     })
 

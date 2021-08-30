@@ -1,5 +1,8 @@
 const path = require('path')
 const HtmlWebpackPlugin = require("html-webpack-plugin")
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CssMinimizePlugin = require('css-minimizer-webpack-plugin') 
+const HhtmlMinifyPlugin = require('html-minimizer-webpack-plugin')
 
 module.exports = {
     entry: './src/js/index.js',
@@ -17,7 +20,16 @@ module.exports = {
             }
         }
     },
-    mode: 'development',
+    mode: 'production',
+    optimization: {
+        minimize: true,
+        minimizer: [
+            new HhtmlMinifyPlugin({
+                test: /\.foo\.html/i
+            }),
+            new CssMinimizePlugin()
+        ]
+    },
     module: {
         rules: [
             {
@@ -26,10 +38,21 @@ module.exports = {
             },
             {
                 test: /\.s[ac]ss$/i,
+                exclude: /node_modules/,
                 use: [
-                    "style-loader",
-                    "css-loader",
-                    "sass-loader"
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    }
                 ]
             },
             {
@@ -42,14 +65,18 @@ module.exports = {
             },
             {
                 test: /\.html$/i, 
+                exclude: /node_modules/,
                 loader: "html-loader"
             }
         ]
     },
     plugins: [
         new HtmlWebpackPlugin({
-            minify: false,
-            template: path.resolve(__dirname + '/src/index.html')
-        })
+            minify: true,
+            template: path.resolve(__dirname + '/src/index.html'),
+            inject: 'body',
+            scriptLoading: 'blocking'
+        }),
+        new MiniCssExtractPlugin()
     ]
 }

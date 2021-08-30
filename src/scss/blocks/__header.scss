@@ -1,17 +1,33 @@
 .header {
     margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.darkmode {
+    background: #000;
+    height: 4rem;
+    width: 4rem;
+    background: url('/src/assets/moon.svg');
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
 }
 
 .header__language {
     display: flex;
     justify-content: flex-end;
+    
     gap: 2rem;
-    height: 6rem;
 }
 
 .header__image {
     height: inherit;
     cursor: pointer;
+    height: 6rem;
 }
 
 .header__image *{

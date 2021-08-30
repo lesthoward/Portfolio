@@ -368,7 +368,7 @@
 .navigation__link::after {
     content: '';
     display: block;
-    background: var(--light-border);
+    background: var(--link-boder);
     height: .2rem;
     width: 120%;
     margin-top: .5rem;
@@ -386,7 +386,9 @@
 }
 
 @media screen and (max-width:1400px) {
-    
+    .navigation__link::after {
+        display: none;
+    }
 
     .navigation__togle {
         background: var(--text-color);
@@ -481,7 +483,8 @@
 
 // Font-Sizes
 @media screen and (max-width:1024px) {
-    .dark {
+    .dark,
+    .light {
         --font-size-uptitle: 5rem;
         --font-size-title: 4rem;
         --font-size-upparagraph: 2rem;
@@ -492,7 +495,8 @@
 }
 
 @media screen and (max-width:768px) {
-    .dark {
+    .dark,
+    .light {
         --font-size-uptitle: 3.8rem;
         --font-size-title: 3.5rem;
         --font-size-upsubtitle: 2rem;

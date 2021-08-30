@@ -80,10 +80,17 @@ function projectSection (projects) {
 
 // Click on scroll icon
 document.querySelector('.firstlook__scroll')
-.addEventListener('click', () => {
-    const sectionPointer = document.querySelectorAll('section')[1]
-    sectionPointer.scrollIntoView({
-        behavior: 'smooth'
-    })
+    .addEventListener('click', () => {
+        const sectionPointer = document.querySelectorAll('section')[1]
+        sectionPointer.scrollIntoView({
+            behavior: 'smooth'
+        })
     
 })
+
+// Dark mode
+document.querySelector('.darkmode')
+    .addEventListener('click', () => {
+        document.body.classList.toggle('dark')
+        document.body.classList.toggle('light')
+    })

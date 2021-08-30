@@ -30,23 +30,28 @@
     --border-box: rgba(255,255,255,.8);
     --input-border: rgba(255,255,255,.4);
     --light-border: rgba(255,255,255,.4);
+    --link-boder: rgba(255,255,255,.4);
     --modal-layer: rgba(0,0,0,.2);
     --warning-message: #FF6F59;
 }
+
 
 .light {
     // Main Content
     --background-color: #f2f2f2;
     --text-color: rgba(0,0,0,.8);
     --text-contrast-color: #000;
+    --text-reverse-color: #fff;
     --light-text-color: rgba(0,0,0,.6);
-    --first-color: #2b92e7;
+    --first-color: #10d5ff;
+    --wrapper: #121b24;
     // Font Sizes
     --font-size-uptitle: 6rem;
     --font-size-title: 5rem;
     --font-size-upsubtitle: 2.5rem;
     --font-size-upparagraph: 2.5rem;
     --font-size-general: 1.6rem;
+    --card-font-size: 1.5rem;
 
     --font-size-projects__title: ;
     // Font Family
@@ -58,7 +63,37 @@
     --border-box: rgba(0,0,0,.8);
     --input-border: rgba(0,0,0,.4);
     --light-border: rgba(0,0,0,.4);
+    --link-boder: #121b24;
+    --modal-layer: rgba(0,0,0,.2);
+    --warning-message: #FF6F59;
 }
+
+// .light {
+//     // Main Content
+//     --background-color: #f2f2f2;
+//     --text-color: rgba(0,0,0,.8);
+//     --text-contrast-color: #000;
+//     --light-text-color: rgba(0,0,0,.6);
+//     --first-color: #2b92e7;
+//     // Font Sizes
+//     --font-size-uptitle: 6rem;
+//     --font-size-title: 5rem;
+//     --font-size-upsubtitle: 2.5rem;
+//     --font-size-upparagraph: 2.5rem;
+//     --font-size-general: 1.6rem;
+//     --card-font-size: 1.5rem;
+
+//     --font-size-projects__title: ;
+//     // Font Family
+//     --font-family: 'Segoe UI', sans-serif;
+//     --second-font-family: 'Fira Code', arial;
+//     --third-font-family: 'Segoe Print', arial;
+//     // Variety
+//     --highlight: #10d5ff;
+//     --border-box: rgba(0,0,0,.8);
+//     --input-border: rgba(0,0,0,.4);
+//     --light-border: rgba(0,0,0,.4);
+// }
 
 ::selection {
     background: var(--first-color);
@@ -81,6 +116,7 @@ body {
     color: var(--text-color);
     font-family: var(--font-family);
     font-size: var(--font-size-general);
+    transition: background .2s ease;
 }
 
 .container {
