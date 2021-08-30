@@ -90,7 +90,6 @@ function singleProjectDOM (projects, condicionalLength = 0) {
             // Es importante que el a le reste a b 
             return b['rating'] - a['rating']
         })
-        console.log(projects);
 
     projectsContainer.innerHTML = projects
     .map((singleProject, index) => {

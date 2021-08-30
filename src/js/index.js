@@ -1,3 +1,4 @@
+import animatingDOM from './animation';
 import TypeWritter from './classes/typewritter';
 import { navEventClick, findProjectInArr, } from './functions'
 import { singleProjectDOM, technologiesDOM, loadMoreProjectsDOM } from './intoDOM';
@@ -38,6 +39,9 @@ const init = async () => {
 
     // LOADMORE (PROJECT SETION)
     loadMoreProjectsDOM(objectTranslated)
+
+    // ANIMATING DOM
+    animatingDOM()
 }
 window.addEventListener('load', init)
 

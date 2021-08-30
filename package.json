@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "description": "See all my personal projects here",
   "main": "src/js/app.js",
-  "dependencies": {},
+  "dependencies": {
+    "gsap": "^3.7.1"
+  },
   "devDependencies": {
     "css-loader": "^6.2.0",
     "html-loader": "^2.1.2",

@@ -10,8 +10,8 @@ class TypeWritter {
         this.clickOn = clickOn
         // Times
         this.timeout = 0
-        this.timeTyping = 180
-        this.timeDelating = 150
+        this.timeTyping = 170
+        this.timeDelating = 130
         this.timePause = 700
         // Blink
         this.sloganLine = document.querySelector('.slogan__line');
