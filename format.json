@@ -15,7 +15,7 @@
 		"navbar": ["Proyectos", "Habilidades", "Más", "linkeding"],
 		"variety": {
 			"loader": ["cargar más", "expandir todo", "ver todo", "No hay más para mostrar"],
-			"inputFilter": "Filter by technology or tool"
+			"inputFilter": "filtra por tecnologías o herramientas"
 		},
 		"projects": [
 			{
@@ -164,7 +164,7 @@
 		"navbar": ["projects", "skills", "about", "linkeding"],
 		"variety": {
 			"loader": ["Load more", "Expand All", "View All", "Everything has been loaded"],
-			"inputFilter": "Filter by technology or tool"
+			"inputFilter": "Filter by technologies or tools"
 		},
 		"projects": [
 			{

@@ -35,10 +35,10 @@ async function changeLanguage(lang) {
 	document.querySelector('.loading__more--text').innerText = objectLang.variety.loader[0]
 	document.querySelector('.loading__expandall--text').textContent = objectLang.variety.loader[1]
 	document.querySelector('.loading__fullprojects--text').textContent = objectLang.variety.loader[2]
+	// Loaded Message
 	document.querySelector('.loading__complete').textContent = objectLang.variety.loader[3]
 	// ==== Input search project
-	// Loaded Message
-
+	document.querySelector('.form__input').placeholder = objectLang.variety.inputFilter
 
 
     return {object, objectLang}

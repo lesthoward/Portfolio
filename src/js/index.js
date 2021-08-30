@@ -73,3 +73,13 @@ function projectSection (projects) {
     })
     
 }
+
+// Click on scroll icon
+document.querySelector('.firstlook__scroll')
+.addEventListener('click', () => {
+    const sectionPointer = document.querySelectorAll('section')[1]
+    sectionPointer.scrollIntoView({
+        behavior: 'smooth'
+    })
+    
+})

@@ -13,6 +13,10 @@
     max-width: 90%;
 }
 
+.firstlook__scroll {
+    cursor: pointer;
+}
+
 .slogan {
     margin-top: 8rem;
 }
@@ -212,6 +216,7 @@
     gap: 1rem;
 }
 
+
 .projects__loading > * {
     padding: 1.5rem 2.5rem;
     color: var(--background-color);
@@ -228,6 +233,26 @@
 
 .projects__loading > *:active {
     transform: scale(1.1);
+}
+
+
+@media screen and (max-width:468px){
+    .projects__loading {
+        flex-wrap: wrap;
+    }
+
+    .projects__loading > * {
+        flex: 1;
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    } 
+
+    .loading__quantiy {
+        margin-left: .3rem;
+    }
 }
 
 .loading__complete {
