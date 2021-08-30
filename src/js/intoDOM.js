@@ -171,6 +171,7 @@ function singleProjectDOM (projects, condicionalLength = 0) {
 function loadMoreProjectsDOM (objectTranslated) {
     let loadmore = 3
     let contentLoaded;
+    let adiccionalHeight = 200
     document.querySelector('.loading__expandall .loading__quantiy')
         .textContent = `(${objectTranslated.projects.length})`
 
@@ -196,7 +197,8 @@ function loadMoreProjectsDOM (objectTranslated) {
         if(loadmore > objectTranslated.projects.length){
             contentLoaded = true
         }
-        window.scroll(0, scroll.offsetTop - window.innerHeight +50)
+        console.log(scroll.offsetTop, window.innerHeight);
+        window.scroll(0, scroll.offsetTop + adiccionalHeight)
     })
 
 
@@ -211,7 +213,7 @@ function loadMoreProjectsDOM (objectTranslated) {
                 $messageLoadedDOM.style.display = 'none'
             }, 3000);
         }
-        window.scroll(0, scroll.offsetTop - window.innerHeight +50)
+        window.scroll(0, scroll.offsetTop + adiccionalHeight)
         contentLoaded = true
     })
 }
