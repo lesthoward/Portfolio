@@ -171,7 +171,7 @@ function singleProjectDOM (projects, condicionalLength = 0) {
 function loadMoreProjectsDOM (objectTranslated) {
     let loadmore = 3
     let contentLoaded;
-    let adiccionalHeight = 200
+    let adiccionalHeight = 150
     document.querySelector('.loading__expandall .loading__quantiy')
         .textContent = `(${objectTranslated.projects.length})`
 
