@@ -77,6 +77,8 @@ module.exports = {
             inject: 'body',
             scriptLoading: 'blocking'
         }),
-        new MiniCssExtractPlugin()
+        new MiniCssExtractPlugin({
+            chunkFilename: 'chunkFilename.css'
+        })
     ]
 }

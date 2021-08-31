@@ -157,7 +157,7 @@ module.exports = __webpack_require__.p + "f20748caf2dac55710dd.svg";
 /******/ 		// This function allow to reference all chunks
 /******/ 		__webpack_require__.miniCssF = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "" + chunkId + ".css";
+/******/ 			return "chunkFilename.css";
 /******/ 		};
 /******/ 	})();
 /******/ 	
