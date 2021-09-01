@@ -5,7 +5,7 @@
 }
 
 .firstlook {
-    width: 60rem;
+    width: 70rem;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -511,5 +511,9 @@
 @media screen and (max-width:468px) {
     .firstlook {
         min-width: 100%;
+    }
+
+    .slogan__typewritter {
+        flex-direction: column;
     }
 }

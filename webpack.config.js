@@ -80,5 +80,10 @@ module.exports = {
         new MiniCssExtractPlugin({
             chunkFilename: 'chunkFilename.css'
         })
-    ]
+    ],
+    performance: {
+        hints: false,
+        maxEntrypointSize: 512000,
+        maxAssetSize: 512000
+    }
 }
