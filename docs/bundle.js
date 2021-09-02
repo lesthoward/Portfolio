@@ -5971,7 +5971,7 @@ function navbarDOM (navContent, object='') {
         // Different behind to links that are no redirects to another page
         let target  = '';
         let href = navbarENLinks
-        if(link !== 'linkeding') {
+        if(link !== 'linkedin') {
             href = '#' + navbarENLinks[index]
         } else {
             href = 'https://www.linkedin.com/in/lesthoward/'
