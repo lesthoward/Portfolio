@@ -3,7 +3,8 @@ import { navbarDOM, paragraphDOM } from './intoDOM';
 
 async function changeLanguage(lang) {
 	const object = await getLanguageTexts();
-	const objectLang = object[lang];
+	const defaultLanguage = lang || object.default_language.toUpperCase() || 'ES'
+	const objectLang = object[defaultLanguage];
 
 	const { personal_information } = objectLang;
 	// First Look in page

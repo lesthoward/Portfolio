@@ -24,8 +24,8 @@
     font-size: var(--font-size-uptitle);
     text-transform: uppercase;
     font-weight: 900;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 2;
 }
 
 .slogan__word {
@@ -81,7 +81,7 @@
     color: var(--light-text-color);
     font-size: var(--font-size-upparagraph);
     font-weight: lighter;
-    line-height: 1.5;
+    line-height: 1.7;
 }
 
 .firstlook__scroll {
@@ -220,7 +220,7 @@
 
 .projects__loading > * {
     padding: 1.5rem 2.5rem;
-    color: var(--background-color);
+    color: var(--button-text-color);
     background: var(--first-color);
     border: .25rem solid var(--text-contrast-color);
     cursor: pointer;

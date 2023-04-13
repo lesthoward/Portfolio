@@ -12,6 +12,7 @@
     --light-text-color: rgba(255,255,255,.6);
     --first-color: #10d5ff;
     --wrapper: #fff;
+    --button-text-color: #121b24;
     // Font Sizes
     --font-size-uptitle: 6rem;
     --font-size-title: 5rem;
@@ -42,9 +43,10 @@
     --text-color: rgba(0,0,0,.8);
     --text-contrast-color: #000;
     --text-reverse-color: #fff;
-    --light-text-color: rgba(0,0,0,.6);
+    --light-text-color: rgba(0,0,0,.8);
     --first-color: #10d5ff;
     --wrapper: #121b24;
+    --button-text-color: #121b24;
     // Font Sizes
     --font-size-uptitle: 6rem;
     --font-size-title: 5rem;
@@ -63,7 +65,7 @@
     --border-box: rgba(0,0,0,.8);
     --input-border: rgba(0,0,0,.4);
     --light-border: rgba(0,0,0,.4);
-    --link-boder: #121b24;
+    --link-boder: rgba(0, 0, 0, 0.4);
     --modal-layer: rgba(0,0,0,.2);
     --warning-message: #FF6F59;
 }

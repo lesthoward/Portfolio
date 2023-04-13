@@ -38,7 +38,6 @@ function findProjectInArr (projects, inputValue) {
             }
         })
     })
-    console.log(filteredProject);
     singleProjectDOM(filteredProject, filteredProject.length)
 
 }

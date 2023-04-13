@@ -10,8 +10,8 @@ class TypeWritter {
         this.clickOn = clickOn
         // Times
         this.timeout = 0
-        this.timeTyping = 170
-        this.timeDelating = 130
+        this.timeTyping = 50
+        this.timeDelating = 110
         this.timePause = 700
         // Blink
         this.sloganLine = document.querySelector('.slogan__line');
@@ -32,7 +32,6 @@ class TypeWritter {
         let timeout = setTimeout(() => this.callFuncions(), this.timeout); 
         if(this.clickOn) {
             clearTimeout(timeout)
-            console.log('Click to pause');
         }
     }
 
@@ -47,7 +46,6 @@ class TypeWritter {
             this.indexLetter++
         }
         
-        // console.log(this.indexLetter);
         this.originalText = this.selectedWord.substring(0, this.indexLetter)
         
     }

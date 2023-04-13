@@ -47,19 +47,21 @@ function navbarDOM (navContent, object='') {
     const navbarWrapper = document.querySelector('.navigation__nav');
     navbarWrapper.innerHTML = navContent
     .map((link, index) => { 
+        const key = link.key
+        const text = link.text
+        const getHref = link.href
         // Different behind to links that are no redirects to another page
         let target  = '';
-        let href = navbarENLinks
-        if(link !== 'linkeding') {
-            href = '#' + navbarENLinks[index]
+        let href = getHref || key
+        if(!getHref) {
+            href = '#' + key
         } else {
-            href = 'https://www.linkedin.com/in/lesthoward/'
             target = 'target="__blank"'
         }
 
     return` <a class="navigation__link" href="${href}" ${target}>
-            <span class="navigation__highlight">0${index}.</span>
-            ${link}
+            <span class="navigation__highlight">0${index + 1}.</span>
+            ${text}
         </a> 
     `}).join('')
 }
@@ -182,7 +184,7 @@ function loadMoreProjectsDOM (objectTranslated) {
         .textContent = `(${objectTranslated.projects.length})`
 
     document.querySelector('.loading__more .loading__quantiy')
-        .textContent = `(${loadmore})`
+        .textContent = `(+${loadmore})`
 
     const $messageLoadedDOM = document.querySelector('.loading__complete'); 
     const scroll = document.querySelector('.scroll');
